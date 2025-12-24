@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to our Wi-Fi</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:linear-gradient(135deg,#667eea,#764ba2);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{background:#fff;border-radius:20px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);max-width:440px;width:100%;overflow:hidden}
+.header{background:#2563eb;color:#fff;padding:32px 24px;text-align:center}
+.header h1{font-size:24px;margin:12px 0 4px}
+.body{padding:28px 24px}
+.rules{background:#f3f4f6;border-radius:12px;padding:20px;margin-bottom:24px}
+.rules h2{font-size:16px;margin-bottom:16px}
+.rule{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #e5e7eb}
+.rule:last-child{border:none}
+.checkbox{display:flex;gap:12px;margin-bottom:20px;cursor:pointer}
+.checkbox input{width:22px;height:22px}
+.btn{width:100%;background:#2563eb;color:#fff;border:none;padding:16px;font-size:16px;font-weight:600;border-radius:12px;cursor:pointer}
+.btn:disabled{background:#9ca3af;cursor:not-allowed}
+.footer{text-align:center;padding:16px 24px;border-top:1px solid #e5e7eb;font-size:12px;color:#6b7280}
+.footer a{color:#2563eb;text-decoration:none}
+.success{position:fixed;inset:0;background:rgba(16,185,129,.95);display:none;align-items:center;justify-content:center;flex-direction:column;color:#fff;text-align:center}
+.success.show{display:flex}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="header">
+<div style="font-size:48px">📶</div>
+<h1 id="familyName">Welcome to our Wi-Fi</h1>
+<p>Please read our house rules before connecting</p>
+</div>
+<div class="body">
+<div class="rules">
+<h2>📋 Our Screen Boundaries</h2>
+<div class="rule"><span>⏰</span><span>Screens go away at <strong>7:30pm</strong></span></div>
+<div class="rule"><span>🍽️</span><span>No phones at the dinner table</span></div>
+<div class="rule"><span>🌳</span><span>We take breaks outside</span></div>
+<div class="rule"><span>🤝</span><span>Need more time? Just ask!</span></div>
+</div>
+<label class="checkbox">
+<input type="checkbox" id="agree" onchange="document.getElementById('btn').disabled=!this.checked">
+<span>I understand and will respect these boundaries</span>
+</label>
+<button class="btn" id="btn" disabled onclick="document.querySelector('.success').classList.add('show');setTimeout(()=>location.href='http://captive.apple.com/success.html',2000)">Connect to Wi-Fi →</button>
+</div>
+<div class="footer">
+<p>Powered by <a href="https://kidsvisitmode.workfamilyai.org">Kids Visit Mode</a> • Free for all families</p>
+</div>
+</div>
+<div class="success">
+<div style="font-size:72px">✅</div>
+<h2>You're connected!</h2>
+<p>Thanks for respecting our boundaries. Enjoy your visit!</p>
+</div>
+</body>
+</html>

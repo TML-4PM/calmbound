@@ -1,0 +1,8 @@
+{
+  "name": "calmbound",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Humane screen time boundaries for Australian families",
+  "author": "Tech4Humanity <hello@tech4humanity.com.au>",
+  "license": "MIT"
+}

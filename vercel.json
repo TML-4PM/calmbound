@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    {"src": "packages/kvm/microsite/index.html", "use": "@vercel/static"}
+  ],
+  "routes": [
+    {"src": "/", "dest": "/packages/kvm/microsite/index.html"},
+    {"src": "/portal", "dest": "/packages/kvm/portal/index.html"}
+  ]
+}
